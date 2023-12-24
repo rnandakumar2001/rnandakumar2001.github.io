@@ -54,9 +54,9 @@
 								<div class="inner">
 
 									<h3 class="major">Introduction</h3>
-									<p>Using advanced RRT, Rapid Random Tree, a drones path is planned through a set of randomly generted hoops. The drone has to find the shortest way through these hoops over a testing set of 200. </p>
+									<p>Using advanced RRT, Rapid Random Tree, a drones path is planned through a set of randomly generted hoops. The drone has to find the shortest way through these hoops over a testing set of 200. A logarithmic loss function is used to exponentially reduce the error between each test run and by the 100th run the drone is able to pass through all the hoops.</p>
 
-									<p>Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus. Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam. Proin nec commodo, vel scelerisque nisi scelerisque. Suspendisse id quam vel tortor tincidunt suscipit. Nullam auctor orci eu dolor consectetur, interdum ullamcorper ante tincidunt. Mauris felis nec felis elementum varius.</p>
+									<p>By constantly adjusting the angular speed and setting a reward function with a gradient towards the final hoop the drone is able to learn its path within 200 test runs rather than a much longer 1000 or 10000 sanple size that is usually the convention. Below there is a video of the drone through all of its test runs and a snippet of the loss function code and reward function code.</p>
 
 									<h3 class="major">Vitae phasellus</h3>
 									<p>Cras mattis ante fermentum, malesuada neque vitae, eleifend erat. Phasellus non pulvinar erat. Fusce tincidunt, nisl eget mattis egestas, purus ipsum consequat orci, sit amet lobortis lorem lacus in tellus. Sed ac elementum arcu. Quisque placerat auctor laoreet.</p>
