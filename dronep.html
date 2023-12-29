@@ -61,26 +61,26 @@
 									<h3 class="major">RRT Code Implementation</h3>
 									<h4>Preformatted</h4>
 										<pre><code>
-										def drone_racing_rrt(start_pose: gtsam.Pose3, target_poses: List[gtsam.Pose3]) -> List[gtsam.Pose3]:
-											'''
-											Arguments:
-											 - start_pose: gtsam.Pose3, initial pose of the drone
-											 - target_poses: List[gtsam.Pose3], list of hoop poses (RRT targets)
+def drone_racing_rrt(start_pose: gtsam.Pose3, target_poses: List[gtsam.Pose3]) -> List[gtsam.Pose3]:
+	'''
+	Arguments:
+	 - start_pose: gtsam.Pose3, initial pose of the drone
+	 - target_poses: List[gtsam.Pose3], list of hoop poses (RRT targets)
+								  
+	Returns:
+	 - drone_path: List[gtsam.Pose3], entire path from start to last hoop
+	'''
 										  
-											Returns:
-											 - drone_path: List[gtsam.Pose3], entire path from start to last hoop
-											'''
+	drone_path = []
+	cStart = start_pose
+	for t in target_poses:
+	  rrt, parents = run_rrt(cStart, t, generate_random_pose, steer, helpers.distance_between_poses, find_nearest_pose, threshold=1.5)
+	  path = get_rrt_path(rrt,parents)
+	  helpers.pass_through_the_hoop(t,path)
 										  
-											drone_path = []
-											cStart = start_pose
-											for t in target_poses:
-											  rrt, parents = run_rrt(cStart, t, generate_random_pose, steer, helpers.distance_between_poses, find_nearest_pose, threshold=1.5)
-											  path = get_rrt_path(rrt,parents)
-											  helpers.pass_through_the_hoop(t,path)
-										  
-											  cStart = path[-1]
-											  drone_path += path
-											return drone_path</code></pre>
+	  cStart = path[-1]
+	  drone_path += path
+	return drone_path</code></pre>
 									<section class="features">
 										<article>
 											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
