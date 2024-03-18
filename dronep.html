@@ -59,7 +59,7 @@
 									<p>By constantly adjusting the angular speed and setting a reward function with a gradient towards the final hoop the drone is able to learn its path within 200 test runs rather than a much longer 1000 or 10000 sanple size that is usually the convention. Below there is a video of the drone through all of its test runs and a snippet of the loss function code and reward function code.</p>
 
 									<h3 class="major">RRT Code Implementation</h3>
-									<h4>Preformatted</h4>
+									<h4>Code</h4>
 										<pre><code>
 def drone_racing_rrt(start_pose: gtsam.Pose3, target_poses: List[gtsam.Pose3]) -> List[gtsam.Pose3]:
 	'''
@@ -81,27 +81,13 @@ def drone_racing_rrt(start_pose: gtsam.Pose3, target_poses: List[gtsam.Pose3]) -
 	  cStart = path[-1]
 	  drone_path += path
 	return drone_path</code></pre>
-									<h1>The video loop attribute</h1>
+									<h1>The Drone Path</h1>
 
-									<video width="1280" height="720" autoplay controls loop>
+									<video contols muted width="1280" height="720" autoplay controls loop>
 	  									<source src="assets/Dronepath.mp4" type="video/mp4">
 	  									Your browser does not support the video tag.
 									</video>
 	
-									<section class="features">
-										<article>
-											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-											<h3 class="major">Sed feugiat lorem</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-											<h3 class="major">Nisl placerat</h3>
-											<p>Lorem ipsum dolor sit amet, consectetur adipiscing vehicula id nulla dignissim dapibus ultrices.</p>
-											<a href="#" class="special">Learn more</a>
-										</article>
-									</section>
 
 								</div>
 							</div>
