@@ -1,0 +1,95 @@
+/* General Styling */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Theme Variables */
+:root {
+    --bg-color: #F8F9FA;
+    --text-color: #000000;
+    --accent-color: #F77F00; /* Goku’s Gi Orange for Light Mode */
+}
+
+.dark-mode {
+    --bg-color: #0D0D10;
+    --text-color: #ffffff;
+    --accent-color: #FF66CC; /* Pink Accent for Dark Mode */
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--accent-color);
+    color: white;
+}
+
+#theme-toggle {
+    padding: 10px 15px;
+    background: var(--text-color);
+    color: var(--bg-color);
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#theme-toggle:hover {
+    opacity: 0.8;
+}
+
+/* Sections */
+section {
+    padding: 40px;
+    text-align: center;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.project {
+    width: 250px;
+    padding: 15px;
+    background: var(--text-color);
+    color: var(--bg-color);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Font Assignments */
+.comble {
+    font-family: 'Fira Code', monospace;
+}
+
+.drone {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+/* Game Demo Section */
+#game-demo button {
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#game-demo button:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}

@@ -1,102 +1,50 @@
-<!DOCTYPE HTML>
-<!--
-	Solid State by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Rohan's Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
-
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="index.html">Portfolio</a></h1>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
-
-				<!-- Menu -->
-					<nav id="menu">
-						<div class="inner">
-							<h2>Menu</h2>
-							<ul class="links">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="dronep.html">Drone Project</a></li>
-								<li><a href="https://rnandakumar2001.github.io/smalldatabigdreams.github.io/">Small Data Big Dreams</a></li>
-								<li><a href="https://cs2340-team43.github.io/Team43.github.io/">Android App</a></li>
-								<li><a href="#">Resume</a></li>
-							</ul>
-							<a href="#" class="close">Close</a>
-						</div>
-					</nav>
-
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<div class="logo"><span class="icon fa-gem"></span></div>
-							<h2>Rohan Nandakumar</h2>
-							<p>Computer Science at Georgia Tech, pursuing a masters degree</p>
-							<p>See my work below</p>
-						</div>
-					</section>
-
-				<!-- Wrapper -->
-					<section id="wrapper">
-
-						<!-- One -->
-							<section id="one" class="wrapper spotlight style1">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Autonomous Drone Project</h2>
-										<p>A simulated Drone flies through a randomly generated set of hoops. The Drone's flight path is determined through Bayes Theorem and reinforcement learning alongside a use of the RRT algorithm.</p>
-										<a href="dronep.html" target="_self" class="special">Learn more</a>
-									</div>
-								</div>
-							</section>
-
-						<!-- Two -->
-							<section id="two" class="wrapper alt spotlight style2">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Small Data Big Dreams</h2>
-										<p>Overfitting, limited dataset sizes, and overall accuracy in machine learning are still areas rife with potential for new development today, and the ability to artificially expand training sets from existing data offers an efficient breakthrough in the field. Consequently, we explored different machine learning techniques in both tabular and image data for producing good prediction results on small data sizes while still avoiding overfitting.</p>
-										<a href="https://rnandakumar2001.github.io/smalldatabigdreams.github.io/" class="special">Learn more</a>
-									</div>
-								</div>
-							</section>
-
-						<!-- Three -->
-							<section id="three" class="wrapper spotlight style3">
-								<div class="inner">
-									<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
-									<div class="content">
-										<h2 class="major">Dungeon Scroller</h2>
-										<p>Designed and Implemented an Android Application. The application is a dungeon scroller and is soon to be deployed on the Playstore</p>
-										<a href="https://cs2340-team43.github.io/Team43.github.io/" class="special">Learn more</a>
-									</div>
-								</div>
-							</section>
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Fira+Code:wght@400;600&family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <button id="theme-toggle">Toggle Theme</button>
+    </header>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Short bio and journey here...</p>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project-list">
+            <div class="project main comble">Comble (Phaser Game)</div>
+            <div class="project main drone">Autonomous Drones Project</div>
+            <div class="project other">Small Data Big Dreams</div>
+            <div class="project other">Android Dungeon Scroller</div>
+            <div class="project other">Motion-Activated Selfie/Security Camera</div>
+        </div>
+    </section>
+    
+    <section id="future-projects">
+        <h2>Future Projects</h2>
+        <p>Coming soon...</p>
+    </section>
+    
+    <section id="game-demo">
+        <h2>Play Comble</h2>
+        <button id="play-game">Try a 30s Demo</button>
+        <div id="game-container" style="display: none;">
+            <canvas id="gameCanvas"></canvas>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 My Portfolio</p>
+    </footer>
+</body>
 </html>
