@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Fira+Code:wght@400;600&family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>My Projects</h1>
+        <a href="index.html" class="home-icon">⌂</a>
+    </header>
+
+    <!-- Large Project Sections -->
+    <section id="comble" class="large-project">
+        <h2>Comble (Phaser Game)</h2>
+        <p><strong>Comble</strong> is a fast-paced web game that my friend and I put together where you have to <strong>clear blocks before they stack too high</strong>. 
+        Sounds easy? Well, the speed keeps increasing, and before you know it, you're in full panic mode trying to keep up!</p>
+        <ul class="comble-features">
+            <li><strong>Gets harder as you go</strong> – Starts off chill but quickly turns chaotic.</li>
+            <li><strong>Super easy to pick up</strong> – Just jump in and start playing.</li>
+            <li><strong>No downloads, no installs</strong> – Runs straight in your browser.</li>
+            <li><strong>Addictive gameplay</strong> – You’ll keep coming back to beat your best time.</li>
+        </ul>
+        <p>We built Comble using <strong>JavaScript and Phaser.js</strong>, and the goal was to create a <strong>simple but addicting</strong> game that anyone could pick up and enjoy. 
+        The physics, speed increases, and mechanics were all tweaked to give the game a <strong>smooth but intense</strong> feel.</p>
+        <div class="center-content">
+            <a href="https://comble.kozunolabs.com/" class="play-comble-btn" target="_blank" rel="noopener noreferrer">Try Comble Here</a>
+        </div>
+    </section>
+
+    <section id="autonomous-drones" class="large-project">
+        <h2>Autonomous Drones Project</h2>
+        <p class="comble-features">
+            This project focuses on <strong>developing a drone capable of autonomously navigating through randomly placed hoops</strong> 
+            using <strong>Rapidly-exploring Random Tree (RRT)</strong> path-planning algorithms. The goal is to generate an <strong>optimal flight path</strong> 
+            that allows the drone to traverse a sequence of hoops while minimizing overall distance traveled. A logarithmic loss function 
+            is used to adjust the path dynamically, exponentially reducing the error between test runs. The approach ensures that 
+            the drone efficiently adapts its navigation to pass through all hoops while optimizing for shortest path selection.
+        </p>
+
+        <h3>RRT Code Implementation</h3>
+        <div class="code-box">
+            <pre><code class="code-left">
+def drone_racing_rrt(start_pose: gtsam.Pose3, target_poses: List[gtsam.Pose3]) -> List[gtsam.Pose3]:
+    '''
+    Arguments:
+     - start_pose: gtsam.Pose3, initial pose of the drone
+     - target_poses: List[gtsam.Pose3], list of hoop poses (RRT targets)
+
+    Returns:
+     - drone_path: List[gtsam.Pose3], entire path from start to last hoop
+    '''
+
+    drone_path = []
+    cStart = start_pose
+    for t in target_poses:
+        rrt, parents = run_rrt(
+            cStart, t, generate_random_pose, steer, 
+            helpers.distance_between_poses, find_nearest_pose, threshold=1.5
+        )
+        path = get_rrt_path(rrt, parents)
+        helpers.pass_through_the_hoop(t, path)
+
+        cStart = path[-1]
+        drone_path += path
+    return drone_path
+            </code></pre>
+        </div>
+
+        <h3>Project Video</h3>
+        <video autoplay loop muted playsinline class="left-align">
+            <source src="./Dronepath.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- Smaller Project Sections -->
+    <div class="small-projects-container">
+        <section id="small-data" class="small-project">
+            <h2>Small Data Big Dreams</h2>
+            <p>Exploring the potential of transfer learning for small datasets in machine learning.</p>
+        </section>
+
+        <section id="android-dungeon" class="small-project">
+            <h2>Android Dungeon Scroller</h2>
+            <p>A 2D dungeon crawler game built for Android with procedurally generated levels.</p>
+        </section>
+
+        <section id="security-camera" class="small-project">
+            <h2>Motion-Activated Security Camera</h2>
+            <p>A prototype security camera that uses gesture recognition for activation.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 My Portfolio</p>
+    </footer>
+</body>
+</html>
+
+

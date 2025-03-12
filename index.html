@@ -11,22 +11,60 @@
 <body>
     <header>
         <h1>Welcome to My Portfolio</h1>
-        <button id="theme-toggle">Toggle Theme</button>
+        <label class="theme-switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+        </label>
     </header>
     
     <section id="about">
         <h2>About Me</h2>
-        <p>Short bio and journey here...</p>
+        <p>
+            Hey there! I'm Rohan, a tech enthusiast from Colorado who's really into AI, robotics, and cloud tech. 
+            At Georgia Tech, I've shaped my studies to dive into hands-on, practical experiences in these areas. 
+            Recently, I had a blast building a large-scale malware analyzer at Amazon using AWS and TypeScript.
+        </p>
+        <p>
+            Growing up in Colorado got me hooked on outdoor adventures—I love tennis, exploring mountain trails, 
+            and hitting the rapids while white-water rafting. These activities keep life fun and constantly inspire my creativity, 
+            especially with robotics and my many small personal projects.
+        </p>
+        <p>
+            When I'm not busy building or exploring, you'll probably find me cheering on the Denver Nuggets or nerding out about the newest 
+            tech trends—I like staying in the loop.
+        </p>
+        <p>
+            Feel free to hit me up to chat about tech, robotics, the outdoors, or even just basketball!
+        </p>
     </section>
     
     <section id="projects">
         <h2>Projects</h2>
-        <div class="project-list">
-            <div class="project main comble">Comble (Phaser Game)</div>
-            <div class="project main drone">Autonomous Drones Project</div>
-            <div class="project other">Small Data Big Dreams</div>
-            <div class="project other">Android Dungeon Scroller</div>
-            <div class="project other">Motion-Activated Selfie/Security Camera</div>
+        <div class="projects-container">
+            <div class="main-projects">
+                <div class="project-card" data-project="comble">
+                    <h3>Comble (Phaser Game)</h3>
+                    <p>A fast-paced JavaScript game where players clear blocks before they stack too high.</p>
+                </div>
+                <div class="project-card" data-project="autonomous-drones">
+                    <h3>Autonomous Drones Project</h3>
+                    <p>Using AI and reinforcement learning, this project simulates autonomous drone navigation.</p>
+                </div>
+            </div>
+            <div class="other-projects">
+                <div class="project-card" data-project="small-data">
+                    <h3>Small Data Big Dreams</h3>
+                    <p>Exploring transfer learning for improving small dataset accuracy in machine learning.</p>
+                </div>
+                <div class="project-card" data-project="android-dungeon">
+                    <h3>Android Dungeon Scroller</h3>
+                    <p>A classic dungeon crawler built for Android, featuring procedurally generated levels.</p>
+                </div>
+                <div class="project-card" data-project="security-camera">
+                    <h3>Motion-Activated Security Camera</h3>
+                    <p>A motion and gesture-activated security camera prototype with a homemade enclosure.</p>
+                </div>
+            </div>
         </div>
     </section>
     
