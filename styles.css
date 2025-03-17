@@ -100,6 +100,30 @@ section {
     box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.1);
 }
 
+/* About Me Section */
+.about-container {
+    display: flex;
+    align-items: flex-start;
+    max-width: 80%;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+/* About Me Photo */
+.about-photo {
+    width: 150px; /* Adjust as needed */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* About Me Text */
+.about-container p {
+    text-align: left;
+    margin: 0; /* Ensures text starts at the same left margin as the image */
+    max-width: 1200px; /* Adjust width as needed */
+}
+
 /* Projects Section */
 .projects-container {
     display: flex;
